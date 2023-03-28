@@ -11,11 +11,9 @@ export abstract class Router {
         this.router = ExpressRouter();
     }
 
-    public setup(): void {
-        
-    }
-
     public get router_exp() {
         return this.router; 
     }
+
+    public abstract setup(): void;
 }
