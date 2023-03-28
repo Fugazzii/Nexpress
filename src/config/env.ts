@@ -28,11 +28,11 @@ export class Environment {
         return `http://${this.DOMAIN}:${this.PORT}/${this.configure_path(path)}`;
     }
 
-    public get mongodb_uri() {
-        return this.MONGODB_URI;
+    public get mongodb_name() {
+        return this.MONGODB_NAME;
     }
 
-    public get mongodb_name() {
+    public get mongodb_uri() {
         return this.MONGODB_URI;
     }
 
