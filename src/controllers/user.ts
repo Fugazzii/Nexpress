@@ -3,20 +3,19 @@ import { Controller } from "@/interfaces/controller.interface";
 import { MongoDB } from "@/config";
 
 export class UserController extends Controller {
-    private static db: MongoDB;
+    private db: MongoDB;
 
     constructor(_db: MongoDB) {
         super();
-        UserController.db = _db;
+        this.db = _db;
     }
 
-    public async get_users(req: Request, res: Response) {
+    public get_users = async (req: Request, res: Response) => {
         try {
-            const users = await UserController.db.find("users", {});
+            const users = await this.db.find("users", {});
             res.json(users);
         } catch (error) {
             console.log(this);
         }
     }
-
 }

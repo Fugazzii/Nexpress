@@ -7,9 +7,8 @@ export default class Routes {
 
     private all_routes: Router[]; 
 
-    constructor(app: Express, db: MongoDB) {
+    constructor(db: MongoDB) {
         this.all_routes = [new UserRouter(db)];
-        this.setup(app);
     }
 
     public setup(app: Express) {

@@ -40,6 +40,10 @@ export class MongoDB {
         return await this.db.collection(collection_name).find(query).toArray();
     }
 
+    public async find_one(collection_name: string, query: object) {
+        return await this.db.collection(collection_name).findOne(query);
+    }
+
     public async insert(collection_name: string, document: object) {
         return await this.db.collection(collection_name).insertOne(document);
     }

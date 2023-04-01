@@ -3,7 +3,7 @@ import { Router } from "@/interfaces/router.interface";
 import { MongoDB } from "@/config";
 
 export class UserRouter extends Router {
-    protected controller!: UserController;
+    protected controller: UserController;
     public readonly path: string;
 
     constructor(db: MongoDB) {
